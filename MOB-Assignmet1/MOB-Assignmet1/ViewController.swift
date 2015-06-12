@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         else {
             if CheckAge < 16 {
                 AgeMarker = "You are under Age"
-                SexMarker = "You need keep your boyfriend's one snake in them pants"
+                SexMarker = "You need keep your boyfriend's one eye snake in them pants"
             }
             else if CheckAge < 18 {
                 AgeMarker = "You can drive"
