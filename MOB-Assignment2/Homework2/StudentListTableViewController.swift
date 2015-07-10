@@ -88,55 +88,37 @@ class StudentListTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let identifier = segue.identifier {
-            println(segue.identifier)
-            if identifier == "Details"{
-                    let DeatilsViewController = segue.destinationViewController as! DetailTableViewController
-                        let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-                            DeatilsViewController.student = studentList[indexPath!.row]
-                            println(indexPath!.row)
-            
-            
-            }
-        }
-    }
-    
-    
-    
-    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let CheckCell = indexPath.row
-//        println(CheckCell)
-//        let PassStu = studentList[CheckCell]
-//        println(PassStu.firstName)
-//        println(PassStu.lastName)
-//        if let VCmove = storyboard.instantiateViewControllerWithIdentifier("DetailsView") as? DetailTableViewController {
-//        self.navigationController!.pushViewController(VCmove, animated: true)
-//            println(PassStu.firstName)
-//            println(PassStu.phoneNumber)
-//            VCmove.LastNameLab.text = PassStu.lastName
-//            VCmove.FirstNameLab.text = PassStu.firstName
-//            VCmove.AgeLab.text = String(PassStu.age)
-//            VCmove.Score1.text = String(PassStu.scores[0])
-//            VCmove.Score2.text = String(PassStu.scores[1])
-//            VCmove.Score3.text = String(PassStu.scores[2])
-//            VCmove.Score4.text = String(PassStu.scores[3])
-//            if let CNum = PassStu.phoneNumber {
-//                print(CNum)
-//                VCmove.Contact.text = String(CNum)
-//            } else {
-//                VCmove.Contact.text = "Number Contact Available"
-//            }
-//        let PPURL = PassStu.profilePicURL
-//        if let URL = NSURL(string: PPURL) {
-//            if let data = NSData(contentsOfURL: URL) {
-//                VCmove.ProfilePic.image = UIImage(data: data)
-//            }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if let identifier = segue.identifier {
+//            println(segue.identifier)
+//            if identifier == "Details"{
+//                    let DeatilsViewController = segue.destinationViewController as! DetailTableViewController
+//                        let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
+//                            DeatilsViewController.student = studentList[indexPath!.row]
+//                            println(indexPath!.row)
+//            
+//            
 //            }
 //        }
 //    }
+    
+    
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let CheckCell = indexPath.row
+        println(CheckCell)
+        let PassStu = studentList[CheckCell]
+        println(PassStu.firstName)
+        println(PassStu.lastName)
+        let VCmove = storyboard.instantiateViewControllerWithIdentifier("DetailsView") as! DetailTableViewController
+        VCmove.student = PassStu
+        self.navigationController!.pushViewController(VCmove, animated: true)
+            println(PassStu.firstName)
+            println(PassStu.phoneNumber)
+        
+    }
 
 
     /*
