@@ -18,9 +18,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igo-bp-KJm" id="I45-XO-wNP">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="8Dd-Ra-sjB" kind="push" identifier="Details" id="vhy-ib-K9m"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

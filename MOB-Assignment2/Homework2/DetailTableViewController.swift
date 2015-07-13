@@ -57,7 +57,12 @@ class DetailTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+//    func checkscore() {
+//        var score[] = self.student.scores
+//        for n in 0.. {
+//            
+//        }
+//    }
     
     func CheckContact() {
         if let ContactVal = self.student.phoneNumber {
